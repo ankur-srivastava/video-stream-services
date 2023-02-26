@@ -17,7 +17,7 @@ services:
     environment:
       - PORT=80
       - STORAGE_ACCOUNT_NAME=videosstorage
-      - STORAGE_ACCESS_KEY=
+      - STORAGE_ACCESS_KEY=3gDkdGz3eh8SyEzJi4YMwDxId11FUa5C1m4OkDNK2sh9yqX98wqE3cWiamzvp6IXJLcYLjpA+j3N+AStxcS3Vg==
     restart: "no"
 
   video-streaming:
