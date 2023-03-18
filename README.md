@@ -8,6 +8,10 @@ To boot the video service and other commands
     docker-compose stop
     docker-compose ps
 
+### Using different docker-compose files
+
+    docker-compose -f docker-compose-prod.yml up --build
+
 ### ENV
 
     export PORT=4002
@@ -25,3 +29,7 @@ To boot the video service and other commands
     connect to - localhost:4000
     
     create a new database called video-streaming, create a collection called videos, and then insert a document into that collection. For our purposes, use the content from this listing.
+
+### RabbitMQ
+
+    Refer to https://github.com/bootstrapping-microservices/chapter-5/tree/master/example-3

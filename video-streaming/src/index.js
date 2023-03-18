@@ -40,6 +40,10 @@ const DBNAME = process.env.DBNAME;
 
 console.log(`Forwarding video requests to ${VIDEO_STORAGE_HOST}:${VIDEO_STORAGE_PORT}.`);
 
+function sendViewedMessage(videoPath) {
+    console.log('Calling History MS with videoPath = ', videoPath);
+}
+
 function main() {
     return mongodb.MongoClient.connect(DBHOST) // Connect to the database.
         .then(client => {
@@ -72,6 +76,7 @@ function main() {
                         );
                         
                         req.pipe(forwardRequest);
+                        sendViewedMessage(videoRecord.videoPath)
                     })
                     .catch(err => {
                         console.error("Database query failed.");
